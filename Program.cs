@@ -21,31 +21,43 @@
             //animal = (pole == Pole.North) ? "Polar bear" : "Penguin";
             //Console.WriteLine($"The animal that lives in the {pole} Pole is the {animal}");
             Console.WriteLine("Switch Statement");
-            var city = CapitalCities.Madrid;
+            var city = CapitalCities.Paris;
             string countryMessage = "";
 
 
-            switch (city)
+            //switch (city)
+            //{
+            //    case CapitalCities.London:
+            //        countryMessage = $"{city} is capital of UK";
+            //        Console.WriteLine(countryMessage);
+            //        break;
+            //    case CapitalCities.Madrid:
+            //        countryMessage = $"{city} is capital of Spain";
+            //        Console.WriteLine(countryMessage);
+            //        break;
+            //    case CapitalCities.Rome:
+            //        countryMessage = $"{city} is capital of Italy";
+            //        Console.WriteLine(countryMessage);
+            //        break;
+            //    case CapitalCities.Paris:
+            //        countryMessage = $"{city} is capital of France";
+            //        Console.WriteLine(countryMessage);
+            //        break;
+            //    default:
+            //        Console.WriteLine(countryMessage);
+            //        break;
+
+            countryMessage = city switch
             {
-                case CapitalCities.London:
-                    countryMessage = $"{city} is capital of UK";
-                    Console.WriteLine(countryMessage);
-                    break;
-                case CapitalCities.Madrid:
-                    countryMessage = $"{city} is capital of Spain";
-                    Console.WriteLine(countryMessage);
-                    break;
-                case CapitalCities.Rome:
-                    countryMessage = $"{city} is capital of Italy";
-                    Console.WriteLine(countryMessage);
-                    break;
-                case CapitalCities.Paris:
-                    countryMessage = $"{city} is capital of France";
-                    Console.WriteLine(countryMessage);
-                    break;
-                default:
-                    Console.WriteLine(countryMessage);
-                    break;
+                CapitalCities.Paris => $"{city} is capital of France",
+                CapitalCities.London => $"{city} is capital of UK",
+                CapitalCities.Rome => $"{city} is capital of Italy",
+                CapitalCities.Madrid => $"{city} is capital of Spain",
+                _ => $"{city} is Nowhere"
+
+            };
+
+            Console.WriteLine(countryMessage);
 
 
 
@@ -53,7 +65,10 @@
 
 
 
-            }
+
+
+
+        
         }
     }
 }
